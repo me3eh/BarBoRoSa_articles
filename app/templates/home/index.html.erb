@@ -1,0 +1,64 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>News Site</title>
+	<style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+      header {
+          background-color: #0073e6;
+          color: white;
+          padding: 10px 20px;
+          text-align: center;
+      }
+      .container {
+          width: 80%;
+          margin: auto;
+          overflow: hidden;
+      }
+      .news-item {
+          background: white;
+          padding: 20px;
+          margin-top: 20px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .news-title {
+          color: #333;
+          font-size: 24px;
+      }
+      .news-content {
+          color: #666;
+          line-height: 1.6;
+      }
+      footer {
+          text-align: center;
+          padding: 20px;
+          background-color: #0073e6;
+          color: white;
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+      }
+	</style>
+</head>
+<h1>Books</h1>
+
+<ul>
+
+	<div class="container">
+		<!-- Example of a news item -->
+		<% articles.each do |book| %>
+			<div class="news-item">
+				<h2 class="news-title"><%= book[:title] %></h2>
+				<h2 class="news-content"> <%= book[:body] %> </h2>
+			</div>
+		<% end %>
+
+		<!-- You can replicate the news-item div to add more news articles -->
+	</div>
+</ul>
