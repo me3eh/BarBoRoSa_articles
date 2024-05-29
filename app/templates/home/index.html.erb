@@ -1,7 +1,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>News Site</title>
+	<title>Articles</title>
 	<style>
       body {
           font-family: Arial, sans-serif;
@@ -46,7 +46,7 @@
       }
 	</style>
 </head>
-<h1>Books</h1>
+<h1 style="justify-content: center; display: flex">Articles</h1>
 
 <ul>
 
@@ -55,7 +55,7 @@
 		<% articles.each do |book| %>
 			<div class="news-item">
 				<h2 class="news-title"><%= book[:title] %></h2>
-				<h2 class="news-content"> <%= book[:body] %> </h2>
+				<p class="news-content"><%= book[:body] %>. ID: <%= book[:id] %> </p>
 			</div>
 		<% end %>
 

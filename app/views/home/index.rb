@@ -7,10 +7,9 @@ module ArticlesForAi
         include Deps["persistence.rom"]
 
         expose :articles do
-          rom.relations[:articles]
-             .select(:title, :body, :id)
-             .order(:title)
-             .to_a
+          @articles_repo = ArticlesForAi::App["repositories.articles"]
+
+          @articles_repo.all
         end
       end
     end
